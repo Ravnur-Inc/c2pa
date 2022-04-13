@@ -10,8 +10,8 @@ import ContentValidator from "./validators/contentValidator";
 
 export class C2PA {
 
-    constructor(bus) {
-        this.c2paState = new C2PAValidationState(bus);
+    constructor(onStatusChange) {
+        this.c2paState = new C2PAValidationState(onStatusChange);
     }
 
     initSegment(data) {

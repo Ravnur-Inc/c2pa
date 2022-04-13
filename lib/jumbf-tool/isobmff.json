@@ -1,0 +1,40 @@
+{
+  "boxContainers": [
+    "avc1",
+    "dinf",
+    "edts",
+    "ilst",
+
+    "jumb",
+    "mdia",
+
+    "minf",
+    "moov",
+    "moof",
+    "mvex",
+    "stbl",
+
+    "traf",
+    "trak",
+    "udta"
+  ],
+  "needParseInfo": [
+    "dref",
+    "meta",
+    "stsd"
+  ],
+  "parseInfo": {
+    "tfdt": {
+      "version": {
+        "length": 8
+      },
+      "flags": {
+        "length": 24
+      },
+      "baseMediaDecodeTime": {
+        "length": 32,
+        "type": "decimal"
+      }
+    }
+  }
+}

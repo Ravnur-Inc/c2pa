@@ -1,0 +1,19 @@
+{
+  "name": "c2pa",
+  "version": "1.0.0",
+  "description": "Ravnur C2PA",
+  "main": "src/index.js",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "bitparser": "^0.1.1",
+    "bitwise": "^2.1.0",
+    "buffer": "^6.0.3",
+    "cbor": "^8.1.0",
+    "elliptic": "^6.5.4",
+    "node-rsa": "^1.1.1",
+    "pkijs": "^2.2.1",
+    "process": "^0.11.10",
+    "intobuffer": "^0.1.2",
+    "lodash": "^4.17.21"
+  }
+}

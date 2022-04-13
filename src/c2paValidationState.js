@@ -9,8 +9,9 @@ export const ValidationResult = {
 };
 
 export class C2PAValidationState {
-    constructor(eventBus) {
-        this.eventBus = eventBus;
+
+    constructor(onStatusChange) {
+        this.onStatusChange = onStatusChange;
         this.tracks = new Map();
         this.result = undefined;
     }
@@ -27,7 +28,7 @@ export class C2PAValidationState {
         this.result = ValidationResult.Succeed;
 
         claims.forEach(x => x.valid = this.result);
-        this.eventBus.emit('c2painit', claims);
+        this.onStatusChange(ValidationResult.Succeed, claims);
     }
 
     setNoData(trackName) {
@@ -37,19 +38,18 @@ export class C2PAValidationState {
 
         this.result = ValidationResult.NoData;
 
-        this.eventBus.emit('c2painit', [{ valid: this.result }]);
+        this.onStatusChange(ValidationResult.NoData);
         console.warn(`[C2PA] [${trackName}] The video is not C2PA compatible. Init segment is missing c2pa box.`);
     }
 
     setFailed(error) {
         this.result = ValidationResult.Failed;
-        this.eventBus.emit('c2painit', [{ valid: this.result }]);
+        this.onStatusChange(ValidationResult.Failed, error);
 
         if (error instanceof C2PAValidationError) {
             console.error(`[C2PA] ${error.message}`, error.messageData);
         } else {
             console.error(`[Exception]`, error);
-            this.eventBus.emit('c2paexception');
             throw error;
         }
     }

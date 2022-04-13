@@ -1,8 +1,12 @@
 {
-  "name": "c2pa",
+  "name": "@ravnur-inc/c2pa",
   "version": "1.0.0",
   "description": "Ravnur C2PA",
   "main": "src/index.js",
+  "repository": "git://github.com/Ravnur-Inc/c2pa.git",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "dependencies": {
     "assert": "^2.0.0",
     "bitparser": "^0.1.1",

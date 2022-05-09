@@ -1,9 +1,10 @@
-# Ravnur C2PA implementation
+# Ravnur C2PA Implementation
 A JavaScript library that helps to implement a client for C2PA manifest validation.
+
 C2PA is an open technical standard providing publishers, creators, and consumers the ability to trace the origin of different types of media.
 https://c2pa.org/public-draft/
 
-## Get started
+## Get Started
 1. Import `c2pa` dependency in your `package.json`.
 2. Create C2PA object instance.
 3. Invoke `c2pa.initSegment(data);` to initialize a segment.

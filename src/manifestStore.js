@@ -40,6 +40,10 @@ export default class ManifestStore {
     resolveBoxBytes(uri) {
         let containerBox = this.documentRoot.resolveUri(uri);
 
-        return this.manifestBytes.subarray(containerBox.rawContent.byteOffset, containerBox.rawContent.byteLength);
+        let length = containerBox.rawContent.byteLength;
+        let startIndex = containerBox.rawContent.byteOffset;
+        let endIndex = startIndex + length;
+
+        return this.manifestBytes.subarray(startIndex, endIndex);
     }
 }

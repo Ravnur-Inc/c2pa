@@ -1,6 +1,6 @@
 {
   "name": "@ravnur-inc/c2pa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ravnur C2PA",
   "main": "src/index.js",
   "repository": "git://github.com/Ravnur-Inc/c2pa.git",

@@ -32,8 +32,8 @@ const ecPublicKeyCurves = {
 };
 
 const certExtensions = {
-    basicConstraints: "2.5.29.35",
-    authorityKeyIdentifier: "2.5.29.19",
+    basicConstraints: "2.5.29.19",
+    authorityKeyIdentifier: "2.5.29.35",
     subjectKeyIdentifier: "2.5.29.14",
     keyUsage: "2.5.29.15",
     extendedKeyUsage: "2.5.29.37",
